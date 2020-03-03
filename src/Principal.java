@@ -2,15 +2,12 @@ public class Principal {
 
     public static void main(String[] args){
 
-        Group g = Group.newGroup("Nois");
+        Orcamento orcamento = new Orcamento();
 
-        g.add(new User("Vagner"));
-        g.add(new User("Zé coméia"));
-        g.add(new User("Zeca piolho"));
-
-        g.sendMsg("bem vindo ao grupo seus cambada de coxa colad");
-
-        g.myNotify();
+        orcamento.addUser(new User("Vagner - Solicitante"));
+        orcamento.addUser(new User("Vagner - vendedor"));
+        orcamento.aprovar();
+        System.out.println(orcamento.getEstado());
     }
 
 

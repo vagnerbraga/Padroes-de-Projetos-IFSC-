@@ -1,6 +1,6 @@
-public class User implements Observer {
+class User implements Observer {
 
-    private final String name;
+    private String name;
 
     public User(String name) {
         this.name = name;
@@ -8,6 +8,6 @@ public class User implements Observer {
 
     @Override
     public void update(String msg) {
-        System.out.println("Usuário: "+ this.name + " recebeu msg: "+ msg);
+        System.out.println("Usário "+ this.name + "  recebeu msg "+ msg);
     }
 }
