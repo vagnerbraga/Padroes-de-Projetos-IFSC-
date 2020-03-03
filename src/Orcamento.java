@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Orcamento {
-    private EstadoImpl estado;
+public class Orcamento implements Observable {
+    private Estado estado;
     private String name;
     private List<Observer> users;
 
@@ -15,21 +15,31 @@ public class Orcamento {
         this.users.add(observer);
     }
 
+    @Override
+    public void remove(Observer observer) {
+        this.users.remove(observer);
+    }
+
+    @Override
+    public void myNotify() {
+        this.users.forEach(item->item.update("Seu orçamento foi: " + this.getEstado()));
+    }
+
     public void aprovar() {
-        this.estado = estado.aprovar();
-        this.estado.setChangeState(this.users);
+        this.setEstado(estado.aprovar());
     }
 
     public void reprovar(){
-
-        this.estado = estado.reprovar();
-        this.estado.setChangeState(this.users);
+        this.setEstado(estado.reprovar());
     }
 
     public void finalizar(){
+        this.setEstado(estado.finalizar());
+    }
 
-        this.estado = estado.finalizar();
-        this.estado.setChangeState(this.users);
+    void setEstado(Estado estado){
+        this.estado = estado;
+        this.myNotify();
     }
 
     public String getEstado() {

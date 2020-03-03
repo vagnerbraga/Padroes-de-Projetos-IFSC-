@@ -4,10 +4,14 @@ public class Principal {
 
         Orcamento orcamento = new Orcamento();
 
-        orcamento.addUser(new User("Vagner - Solicitante"));
-        orcamento.addUser(new User("Vagner - vendedor"));
+        orcamento.addUser(new User("cliente"));
+        orcamento.addUser(new User("vendedor"));
         orcamento.aprovar();
-        System.out.println(orcamento.getEstado());
+
+        orcamento.addUser(new User("Gerente"));
+        //orcamento.myNotify();
+
+        orcamento.finalizar();
     }
 
 

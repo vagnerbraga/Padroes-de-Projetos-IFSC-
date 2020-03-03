@@ -1,9 +1,6 @@
 public interface Estado {
     String getEstado();
-    EstadoImpl aprovar();
-    EstadoImpl reprovar();
-    EstadoImpl finalizar();
-
-    String getLabel();
-
+    Estado aprovar();
+    Estado reprovar();
+    Estado finalizar();
 }

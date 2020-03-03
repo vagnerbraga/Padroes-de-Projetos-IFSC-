@@ -1,27 +1,22 @@
-public class Aprovado extends EstadoImpl {
+public class Aprovado implements Estado {
     @Override
     public String getEstado() {
         return "Aprovado";
     }
 
     @Override
-    public EstadoImpl aprovar() {
+    public Estado aprovar() {
         throw new RuntimeException("nao da");
     }
 
     @Override
-    public EstadoImpl reprovar() {
+    public Estado reprovar() {
         throw new RuntimeException("nao da");
     }
 
     @Override
-    public EstadoImpl finalizar() {
+    public Estado finalizar() {
         return new Finalizado();
-    }
-
-    @Override
-    public String getLabel() {
-        return "Aprovado";
     }
 
 }

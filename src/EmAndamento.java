@@ -1,25 +1,21 @@
-public class EmAndamento extends EstadoImpl {
+public class EmAndamento implements Estado {
     @Override
     public String getEstado() {
         return "Em andamento";
     }
     @Override
-    public EstadoImpl aprovar() {
+    public Estado aprovar() {
         return new Aprovado();
     }
 
     @Override
-    public EstadoImpl reprovar() {
+    public Estado reprovar() {
         return new Reprovado();
     }
 
     @Override
-    public EstadoImpl finalizar() {
+    public Estado finalizar() {
         throw new RuntimeException("nao da");
     }
 
-    @Override
-    public String getLabel() {
-        return "Em andamento";
-    }
 }
