@@ -2,7 +2,7 @@ public class Principal {
 
     public static void main(String[] args){
 
-        Document document = new Document();
+        Document document = new Document(); 
 
         document.connect();
         document.print();

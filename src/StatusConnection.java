@@ -4,6 +4,4 @@ interface StatusConnection {
     void connect(Printable printable);
     void disconnect(Printable printable);
     String status();
-
-
 }
