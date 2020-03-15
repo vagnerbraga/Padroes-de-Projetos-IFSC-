@@ -11,13 +11,17 @@ public class Principal {
         Connection c2 = new Connection("C1 - São Paulo -> Natal", 50, t1, c1);
 
         TripPackage tripPackage = new TripPackage("Ferias em Natal ", c1);
-        System.out.println(tripPackage);
+        show(tripPackage);
 
         TripPackage tripPackage1 = new TripPackage("Ferias em Brasilia ", t1);
-        System.out.println(tripPackage1);
+        show(tripPackage1);
 
         TripPackage tripPackage2 = new TripPackage("Ferias em Natal ", c2);
-        System.out.println(tripPackage2);
+        show(tripPackage2);
+    }
+
+    private static void show(TripPackage tripPackage) {
+        System.out.println(tripPackage);
     }
 
 }

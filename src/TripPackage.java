@@ -3,13 +3,9 @@ class TripPackage {
     private final String name;
     private final ITrip trip;
 
-    TripPackage(String name, ITrip trip) {
+    TripPackage(String name, ITrip mTrip) {
         this.name = name;
-        this.trip = trip;
-    }
-
-    void price(){
-        System.out.println(trip.getPrice());
+        this.trip = mTrip;
     }
 
     @Override
