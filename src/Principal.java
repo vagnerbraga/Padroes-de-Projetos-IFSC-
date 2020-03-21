@@ -18,6 +18,20 @@ public class Principal {
 
         TripPackage tripPackage2 = new TripPackage("Ferias em Natal ", c2);
         show(tripPackage2);
+
+        Customer traveler01 = new Customer("José");
+        Customer traveler02 = new Customer("João");
+        Customer traveler03 = new Customer("Zé");
+
+        tripPackage.add(traveler01);
+        tripPackage.add(traveler02);
+        tripPackage.setDiscount(2);
+
+        tripPackage1.add(traveler02);
+        tripPackage1.add(traveler03);
+
+        tripPackage1.setDiscount(5);
+
     }
 
     private static void show(TripPackage tripPackage) {
