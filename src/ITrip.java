@@ -1,5 +1,0 @@
-
-interface ITrip {
-
-    int getPrice();
-}
