@@ -1,4 +1,18 @@
-class PrintHP implements Printer {
+package themplate_method;
+
+class PrintHP extends Printer {
+
+    static Printer INSTANCE;
+
+    private PrintHP(){}
+
+    public static Printer getINSTANCE() {
+        if(INSTANCE == null){
+            INSTANCE = new PrintHP();
+        }
+        return INSTANCE;
+    }
+
     @Override
     public void printPrinter() {
         System.out.println("|\t\tImpressora HP\t\t\t|");

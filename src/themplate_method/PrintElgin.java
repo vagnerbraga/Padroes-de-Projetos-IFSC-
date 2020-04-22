@@ -1,4 +1,18 @@
-class PrintElgin implements Printer {
+package themplate_method;
+
+class PrintElgin extends Printer {
+
+    static Printer INSTANCE;
+
+    private PrintElgin(){}
+
+    public static Printer getINSTANCE() {
+        if(INSTANCE == null){
+            INSTANCE = new PrintElgin();
+        }
+        return INSTANCE;
+    }
+
     @Override
     public void printPrinter() {
         System.out.println("|       Impressora ELGIN        |");
