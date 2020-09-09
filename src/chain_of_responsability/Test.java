@@ -1,7 +1,5 @@
 package chain_of_responsability;
 
-import org.w3c.dom.ranges.Range;
-
 class Test {
 
     public static void main(String[] args) {

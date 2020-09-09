@@ -21,6 +21,5 @@ class Test {
 
         acao.executar();
 
-
     }
 }

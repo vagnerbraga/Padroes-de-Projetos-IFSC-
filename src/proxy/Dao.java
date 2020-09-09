@@ -1,7 +1,5 @@
 package proxy;
 
-import java.util.List;
-
 interface Dao<T> {
     public void create(T entity);
     public void update(T entity);
