@@ -17,7 +17,7 @@ class Test {
 
         Comando comando = new Acelerar(automovel);
 
-        Acao acao = new ChaveDesligar(comando);
+        Acao acao = new PedalAcelerador(comando);
 
         acao.executar();
 
